@@ -1,0 +1,17 @@
+{
+  "name": "puppeteer-train",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index --trace-warnings",
+    "google": "node google.js --trace-warnings"
+  },
+  "author": "Victoria Luquet",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "puppeteer": "^10.2.0",
+    "puppeteer-core": "^10.2.0"
+  }
+}
