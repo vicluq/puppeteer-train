@@ -7,6 +7,7 @@ dotenv.config();
 const url = "https://www.google.com/";
 
 async function getTable(page) {
+  console.log("Generating table");
   let tbl,
     error = false;
   try {
@@ -65,12 +66,16 @@ async function run() {
 
   while (!gotToTimeout) {
     if (!createdTimeout) {
-      setTimeout(async () => {
-        await getTable();
+      console.log("Created Timeout!");
+
+      setTimeout(async function () {
         gotToTimeout = true;
+        await getTable(browserPage);
       }, 3000);
+
       createdTimeout = true;
     }
+    // Preso no while
   }
 
   await browser.close();
